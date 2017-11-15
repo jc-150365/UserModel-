@@ -21,7 +21,7 @@ namespace SQLiteSample000
             foreach (var user in query)
             {
 
-                //Userテーブルの名前列をLabelに書き出します
+                //Userテーブルの名前列をLabelに書き出す
                 layout.Children.Add(new Label { Text = user.Name });
             }
 
