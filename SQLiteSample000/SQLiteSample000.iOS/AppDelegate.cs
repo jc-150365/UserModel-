@@ -15,7 +15,7 @@ namespace SQLiteSample000.iOS
             //指定したファイルのパスを取得する。
             var dbPath = GetLocalFilePath("culculate.db3");
 
-            //この段階ではまだエラーになります。
+            //この段階ではまだエラーになる。
             LoadApplication(new App(dbPath));
 
             return base.FinishedLaunching(app, options);
@@ -23,7 +23,7 @@ namespace SQLiteSample000.iOS
 
         public static string GetLocalFilePath(string filename)
         {
-            //指定されたファイルのパスを取得します。なければ作成してそのパスを返却します
+            //指定されたファイルのパスを取得する。なければ作成してそのパスを返却する。
             var docFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             var libFolder = System.IO.Path.Combine(docFolder, "..", "Library", "Databases");
 

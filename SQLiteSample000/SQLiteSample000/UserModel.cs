@@ -8,26 +8,29 @@ namespace SQLiteSample000
     [Table("User")]
     public class UserModel
     {
-        //プライマリキー　自動採番されます
+        //主キーー　自動採番される
         [PrimaryKey, AutoIncrement, Column("_id")]
-        //idカラム
+        //id列
         public int Id { get; set; }
-        //名前カラム
+        //名前列
         public string Name { get; set; }
 
-        //Userテーブルに行追加するためのメソッドです
+        //画像列(仮)
+        public byte[] Picture { get; set; }
+
+        //Userテーブルに行追加するためのメソッド
         public static void insertUser(string name)
         {
-            //データベースに接続します
+            //データベースに接続する
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {
 
                 try
                 {
-                    //データベースにUserテーブルを作成します
+                    //データベースにUserテーブルを作成する
                     db.CreateTable<UserModel>(); //赤線出てたから<UserModel>付けた
 
-                    //Userテーブルに行追加します
+                    //Userテーブルに行追加する
                     db.Insert(new UserModel() { Name = name });
 
                     db.Commit();
@@ -43,7 +46,35 @@ namespace SQLiteSample000
             }
         }
 
-        //Userテーブルの行データを取得します
+        /*画像を追加するためのメソッド(ここにエンコードする処理書くのかと思う。それか上のインサートするメソッドのとこか。)
+        public static void inserPicture(byte[] picture)
+        {
+            //データベースに接続する
+            using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
+            {
+
+                try
+                {
+                    //データベースにUserテーブルを作成する(画像の時もこれいるのか?)
+                    db.CreateTable<UserModel>(); //赤線出てたから<UserModel>付けた
+
+                    //Userテーブルに行追加する
+                    db.Insert(new UserModel() { Picture = picture });
+
+                    db.Commit();
+
+                }
+                catch (Exception e)
+                {
+
+                    db.Rollback();
+                    System.Diagnostics.Debug.WriteLine(e);
+
+                }
+            }
+        }*/
+
+        //Userテーブルの行データを取得するメソッド
         public static List<UserModel> selectUser() //赤線出てたから<UserModel>付けた
         {
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
