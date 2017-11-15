@@ -16,7 +16,8 @@ namespace SQLiteSample000
             MainPage = new SQLiteSample000.MainPage();
         }
 
-        protected override void OnStart()
+        protected override void OnStart()//
+
         {
             // Handle when your app starts
         }
