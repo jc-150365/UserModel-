@@ -12,7 +12,7 @@ namespace SQLiteSample000.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
-            //指定したファイルのパスを取得します。
+            //指定したファイルのパスを取得する。
             var dbPath = GetLocalFilePath("culculate.db3");
 
             //この段階ではまだエラーになります。
