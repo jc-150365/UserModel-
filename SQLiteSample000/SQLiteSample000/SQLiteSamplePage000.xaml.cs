@@ -35,7 +35,7 @@ namespace SQLiteSample000
 
             void Button1_Click(object sender, EventArgs e)
             {
-                DisplayAlert("UserModel", "ボタンが押されたんご", "OK");
+                DisplayAlert("UserModel", "ボタンが押されたんご", "OK");//
             }
         }
     }
