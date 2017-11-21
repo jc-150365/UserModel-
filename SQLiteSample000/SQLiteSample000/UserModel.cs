@@ -13,7 +13,7 @@ namespace SQLiteSample000
         //id列
         public int Id { get; set; }
         //名前列
-        public string Name { get; set; }
+        public string Name { get; set; }//
 
         //画像列(仮)
         public byte[] Picture { get; set; }
