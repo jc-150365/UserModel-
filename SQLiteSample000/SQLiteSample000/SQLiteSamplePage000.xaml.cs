@@ -7,7 +7,7 @@ namespace SQLiteSample000
     {
         public SQLiteSamplePage000()
         {
-            InitializeComponent();
+            //InitializeComponent();
 
             var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
 
@@ -30,9 +30,6 @@ namespace SQLiteSample000
             Content = layout;
         }
 
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }
