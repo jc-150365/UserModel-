@@ -16,20 +16,27 @@ namespace SQLiteSample000
             UserModel.insertUser("田中", "13");
             UserModel.insertUser("斎藤", "18");
 
+
+
             //Userテーブルの行データを取得
             var query = UserModel.selectUser();
 
             foreach (var user in query)
             {
-
+                Button button1;
                 //Userテーブルの名前列をLabelに書き出す
-                layout.Children.Add(new Button { Text = user.Name });
-                layout.Children.Add(new Label { Text = user.Ban });
-            }
+                layout.Children.Add(button1 = new Button{ Text = user.Name });
+            
 
             Content = layout;
+
+            }
+
+
+            void Button1_Click(object sender, EventArgs e)
+            {
+                DisplayAlert("UserModel", "ボタンが押されたんご", "OK");
+            }
         }
-
-
     }
 }
