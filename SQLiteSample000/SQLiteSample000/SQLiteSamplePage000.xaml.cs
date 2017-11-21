@@ -12,7 +12,7 @@ namespace SQLiteSample000
             var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
 
             //Userテーブルに適当なデータを追加
-            UserModel.insertUser("鈴木","15");//
+            UserModel.insertUser("鈴木", "15");//
             UserModel.insertUser("田中", "13");
             UserModel.insertUser("斎藤", "18");
 
@@ -27,15 +27,15 @@ namespace SQLiteSample000
             {
                 
                 //Userテーブルの名前列をLabelに書き出す
-                layout.Children.Add(button1 = new Button{ Text = user.Name });
-            
+                layout.Children.Add( new Label{ Text = user.Name });
+                layout.Children.Add( new Label { Text = user.Ban});
 
-            Content = layout;
+
+                Content = layout;
 
             }
-
            
-            button1.Clicked += new EventHandler(Button1_Click);
+             button1.Clicked += Button1_Click;
             
             
             void Button1_Click(object sender, EventArgs e)
