@@ -15,7 +15,7 @@ namespace SQLiteSample000
         //名前列
         public string Name { get; set; }//
 
-        public string Ban { get; set; }
+        //public string Ban { get; set; }
 
         //画像列(仮)
         public byte[] Picture { get; set; }
@@ -33,7 +33,7 @@ namespace SQLiteSample000
                     db.CreateTable<UserModel>(); //赤線出てたから<UserModel>付けた
 
                     //Userテーブルに行追加する
-                    db.Insert(new UserModel() { Name = name , Ban = ban});
+                    db.Insert(new UserModel() { Name = name });
 
                     db.Commit();
 
