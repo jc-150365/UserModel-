@@ -14,14 +14,9 @@ namespace SQLiteSample000
             //AppのdbPathに引数のパスを設定します
             App.dbPath = dbPath;
 
-            InitializeComponent();
+            //InitializeComponent();
 
             MainPage = new SQLiteSamplePage000();
-        }
-
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
         }
 
         protected override void OnStart()
