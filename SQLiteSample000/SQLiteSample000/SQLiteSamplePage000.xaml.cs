@@ -12,7 +12,7 @@ namespace SQLiteSample000
             var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
 
             //Userテーブルに適当なデータを追加
-            UserModel.insertUser("鈴木","15");
+            UserModel.insertUser("鈴木","15");//
             UserModel.insertUser("田中", "13");
             UserModel.insertUser("斎藤", "18");
 
