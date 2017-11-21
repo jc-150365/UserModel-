@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using Xamarin.Forms;
 
 namespace SQLiteSample000
 {
@@ -16,6 +17,11 @@ namespace SQLiteSample000
             InitializeComponent();
 
             MainPage = new SQLiteSamplePage000();
+        }
+
+        private void InitializeComponent()
+        {
+            throw new NotImplementedException();
         }
 
         protected override void OnStart()
